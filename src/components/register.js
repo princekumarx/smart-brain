@@ -1,5 +1,5 @@
 import React from 'react';
- 
+ import './register.css';
 class Register extends React.Component {
 
   constructor(){
@@ -29,6 +29,16 @@ class Register extends React.Component {
  }
 
   onSubmit = ()=>{
+    let model  = document.querySelector("#errorbox");
+    let model2  = document.querySelector("#errorbox2");
+
+    if(!this.state.name || !this.state.email || !this.state.password){
+      model.classList.add('ani');
+      return model.style.display='block';
+    }
+    let good = document.querySelector("#spinbox");
+      good.style.display = 'block';
+
     
     fetch('https://tranquil-castle-39734.herokuapp.com/register',{
       method:'POST',
@@ -44,18 +54,45 @@ class Register extends React.Component {
  if(user.id){
     this.props.loadUser(user);
   this.props.onRouteChange('home');
+  good.style.display = 'none';
+
  }
  else{
-   alert('form submition invalid');
- }
+  model.classList.add('ani');
+  good.style.display = 'none';
+  model2.style.display='block'
+  }
 
   
 }).catch(err => console.log('error something'));
   }
 
+  closeBox =()=>{
+    let boxmodel = document.querySelectorAll(".error");
+console.log(boxmodel)
+     for(var i =0;i< boxmodel.length;i++){
+      boxmodel[i].style.display = 'none';
+
+     }
+
+    
+  }
+
   render(){
     // const {onRouteChange} = this.props;
     return(
+      <div>
+
+       <div id="spinbox" >
+        <div id="loader"></div>
+     </div>
+
+    <div onClick={this.closeBox} id="errorbox" className="error">
+<p>please enter your name email and password</p>
+    </div>
+    <div onClick={this.closeBox} id="errorbox2" className="error">
+<p>email or password is wrong </p>
+    </div>
       
       <article className="br2 ba  dark-gray b--black-10 mv4 w-100 w-60-m w-60-l shadow-2 mw6 center">
 
@@ -87,7 +124,7 @@ class Register extends React.Component {
 </main>
 
 </article>
-
+</div>
   )
 
   }

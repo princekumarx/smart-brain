@@ -4,12 +4,11 @@ import Navigation from  './components/navigation/Navigation';
 import Logo from './components/logo/logo';
 import Rank from './components/Rank/Rank';
 import Register from './components/register';
-
 import Particles from 'react-particles-js';
 import Imageinputform from './components/Imageinputform/Imageinputform';
- import Facerecognition from './components/facerecognition/facerecongnition';
+  import Facerecognition from './components/facerecognition/facerecongnition';
  import SingIn from './components/sign/sign';
-
+ 
 const options={
     particles: {
      number:{
@@ -131,6 +130,7 @@ this.setState({
       });
     
   }
+  
 
   RouteChange =(route)=>{
     if(route === 'signout'){
@@ -150,7 +150,8 @@ this.setState({
   {
     return (
     <div className="App">
-     <Particles params={options} className="particle" />
+   
+      <Particles params={options} className="particle" />
      <Navigation SignOut={this.RouteChange} isSigned={this.state.isSigned} />
     
 
