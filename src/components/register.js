@@ -31,6 +31,7 @@ class Register extends React.Component {
   onSubmit = ()=>{
     let model  = document.querySelector("#errorbox");
     let model2  = document.querySelector("#errorbox2");
+    
 
     if(!this.state.name || !this.state.email || !this.state.password){
       model.classList.add('ani');
@@ -55,7 +56,9 @@ class Register extends React.Component {
     this.props.loadUser(user);
   this.props.onRouteChange('home');
   good.style.display = 'none';
+  window.location.reload();
 
+ 
  }
  else{
   model.classList.add('ani');

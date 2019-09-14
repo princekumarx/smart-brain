@@ -11,10 +11,10 @@ return(
         max:55,
         scale:1.1
     }} 
-    style={{height:150,width:150}} >
+    style={{'height':'100%','width':'100%'}} >
 
  
-    <img className="Tilt-inner " alt="not" style={{paddingTop:'20px',width:'100px',height:'100px'}}  src={logo} />
+    <img className="Tilt-inner " alt="not" style={{paddingTop:'15px',width:'100%',height:'100%'}}  src={logo} />
  
 
     </Tilt>

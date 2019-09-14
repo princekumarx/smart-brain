@@ -12,18 +12,18 @@ import Imageinputform from './components/Imageinputform/Imageinputform';
 const options={
     particles: {
      number:{
-value:150,
+value:100,
  density:true
      },
       size:{
-        value:7.9,
+        value:3,
         random:true
       },
       color:{
-        value:'#d21e1e'
+        value:'#000'
       },
       opacity:{
-        value:0
+        value:8
       }
     }
 } 
@@ -88,6 +88,7 @@ class App extends React.Component {
 
 
   handleChage = (e) => {
+     
 this.setState({
   input:e.target.value
 })
@@ -144,16 +145,22 @@ this.setState({
 
   }
 
+  componentDidMount(){
+    let particles = document.querySelector('.particle');
+    particles.width = window.innerWidth;
+    particles.height = window.innerHeight;
+    console.log('hellow')
+  }
   
 
   render()
   {
     return (
     <div className="App">
-   
+    
       <Particles params={options} className="particle" />
      <Navigation SignOut={this.RouteChange} isSigned={this.state.isSigned} />
-    
+      
 
      {  this.state.route === 'home' ?
      <div>
