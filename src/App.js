@@ -96,11 +96,14 @@ this.setState({
    }
 
   DetectChange = (e)=>{
+    e.preventDefault();
       this.setState({
         imageUrl:this.state.input
       })
+     
+      
       console.log(this.state.input);
-      fetch('https://tranquil-castle-39734.herokuapp.com/imageUrl',{
+      fetch('https://smartbrains-server.herokuapp.com/imageUrl',{
         method:'post',
         headers:{'Content-Type':'application/json'},
         body:JSON.stringify({
@@ -110,7 +113,7 @@ this.setState({
       .then(response => {
         console.log(response);
         if(response){
-           fetch('https://tranquil-castle-39734.herokuapp.com/image',{
+           fetch('https://smartbrains-server.herokuapp.com/image',{
             method:'put',
             headers:{'Content-Type':'application/json'},
             body:JSON.stringify({
@@ -129,7 +132,7 @@ this.setState({
       .catch(err => {
         console.log(err);
       });
-    
+     
   }
   
 

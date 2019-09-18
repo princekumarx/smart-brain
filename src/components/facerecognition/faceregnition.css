@@ -9,3 +9,8 @@
     justify-content: center;
     cursor: pointer;
 }
+.container{
+    z-index:-1;
+    display: flex;
+    justify-content: center;
+  }
