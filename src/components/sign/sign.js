@@ -34,7 +34,7 @@ constructor(){
     let good = document.querySelector("#spinbox");
       good.style.display = 'block';
 
-    fetch('https://tranquil-castle-39734.herokuapp.com/signin',{
+    fetch('https://smartbrains-server.herokuapp.com/signin',{
       method:'POST',
       headers:{'Content-Type':'application/json' },
       body:JSON.stringify({

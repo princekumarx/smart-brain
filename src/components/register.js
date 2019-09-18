@@ -41,7 +41,7 @@ class Register extends React.Component {
       good.style.display = 'block';
 
     
-    fetch('https://tranquil-castle-39734.herokuapp.com/register',{
+    fetch('https://smartbrains-server.herokuapp.com/register',{
       method:'POST',
       headers:{'Content-Type':'application/json'},
       body:JSON.stringify({
