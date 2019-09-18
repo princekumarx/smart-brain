@@ -12,7 +12,7 @@ import Imageinputform from './components/Imageinputform/Imageinputform';
 const options={
     particles: {
      number:{
-value:100,
+value:50,
  density:true
      },
       size:{
