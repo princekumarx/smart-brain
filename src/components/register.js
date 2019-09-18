@@ -97,7 +97,7 @@ console.log(boxmodel)
 <p>email or password is wrong </p>
     </div>
       
-      <article className="br2 ba  dark-gray b--black-10 mv4 w-100 w-60-m w-60-l shadow-2 mw6 center">
+      <article className="br2 ba  dark-gray b--black-10  w-90 w-60-m w-60-l shadow-2 mw6 center">
 
       
       <main className="pa2   main black-80">

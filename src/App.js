@@ -16,7 +16,7 @@ value:50,
  density:true
      },
       size:{
-        value:3,
+        value:1,
         random:true
       },
       color:{

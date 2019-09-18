@@ -1,5 +1,11 @@
 article{
-    margin-top: 20px;
+    margin: 100px auto;
+}
+@media screen and (max-width:700px){
+    article{
+        margin: 100px auto;
+        width: 90%;
+    }
 }
 .error{
     width: 300px;
@@ -34,6 +40,7 @@ article{
     left: 0px;
     right: 0px;
     display: none;
+    z-index: 1000;
  }
 
 #loader{
@@ -41,16 +48,16 @@ article{
     width: 80px;
     height: 80px;
     border-radius: 100%;
-    border: 5px solid ;
+    border: 10px solid ;
     border-bottom-color: rgb(229, 255, 0);
     border-top-color: rgb(0, 255, 157);
-    border-right-color: rgb(0, 204, 255);
-    border-left-color: yellow;
+    border-right-color: rgba(255, 94, 0, 0.829);
+    border-left-color: rgb(255, 0, 76);
      position: absolute;
-     top: 50%;
+     top: calc(50% - 40px);
      left: calc(50% - 40px);
 animation: spin 1s infinite linear;
- 
+   z-index: 1000;
 
 
 }

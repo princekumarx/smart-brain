@@ -7,8 +7,8 @@ const Imageinputform = (props) => {
     
     return(
         <div className="space">
-      <p className="f3">
-          {'This Magic Brain will detect faces in your pictures. Please put some image link to detect face '}
+      <p className="para">
+           This Magic Brain will detect faces in your pictures. Please put some image link to detect face  
       </p>
  <form method="post" >
       <div className="center">

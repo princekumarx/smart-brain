@@ -3,3 +3,8 @@
     justify-content:flex-end;
     margin-left: auto;
 }
+
+p{
+    cursor: pointer;
+    
+}

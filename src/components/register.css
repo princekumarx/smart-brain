@@ -1,5 +1,11 @@
 article{
-    margin-top: 20px;
+    margin: 100px auto;
+}
+@media screen and (max-width:700px){
+    article{
+        margin: 100px auto;
+        width: 100%;
+    }
 }
 .error{
     width: 300px;
@@ -36,6 +42,7 @@ article{
     display: none;
  }
 
+
 #loader{
 
     width: 80px;
@@ -44,10 +51,10 @@ article{
     border: 5px solid ;
     border-bottom-color: rgb(229, 255, 0);
     border-top-color: rgb(0, 255, 157);
-    border-right-color: rgb(0, 204, 255);
+    border-right-color: rgb(255, 145, 0);
     border-left-color: yellow;
      position: absolute;
-     top: 50%;
+     top: calc(50% - 40px);
      left: calc(50% - 40px);
 animation: spin 1s infinite linear;
  
